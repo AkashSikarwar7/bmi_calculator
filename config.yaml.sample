@@ -1,0 +1,23 @@
+# Sample configuration
+general:
+  log_level: INFO
+
+broker:
+  exchange_id: binance
+  # fee is proportion (0.001 = 0.1%)
+  fee: 0.0005
+  # base quote sizes can help sizing orders in live mode
+  base_order_size: 0.001
+
+strategy:
+  name: sma_crossover
+  fast_window: 20
+  slow_window: 50
+
+live:
+  # timeframe examples (ccxt-style): 1m, 5m, 1h, 4h, 1d
+  timeframe: 1m
+  symbol: BTC/USDT
+  # dry-run by default; set to true to place real orders
+  live_trading: false
+
